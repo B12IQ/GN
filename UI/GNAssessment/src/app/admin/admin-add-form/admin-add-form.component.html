@@ -1,0 +1,72 @@
+<div class="container"  *ngIf="addForm">
+    <br/>
+  <h2>
+   Add New Form
+  </h2>
+  <br/>
+  
+    <form #form="ngForm" (ngSubmit)="onSubmit()" >
+     
+  
+      <div class="form-group">
+        <label class="form-label" >User Name</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="addForm.name" >
+      </div>
+      
+   
+      <div class="form-group">
+        <label class="form-label" >Phone Number</label>
+        <input type="tel" name="mobile" class="form-control" [(ngModel)]="addForm.mobile" >
+      </div>
+  
+      <div class="form-group">
+        <label class="form-label" >Email</label>
+        <input type="email" name="email" class="form-control" [(ngModel)]="addForm.email" >
+      </div>
+  
+      <div class="form-group">
+        <label class="form-label" >Country</label>
+        <input type="text" name="country" class="form-control" [(ngModel)]="addForm.country" >
+      </div>
+  
+      <div class="form-group">
+        <label class="form-label" >City</label>
+        <input type="text" name="city" class="form-control" [(ngModel)]="addForm.city" >
+      </div>
+  
+      <div class="form-group">
+        <label class="form-label" >Date of Birth</label>
+        <input  name="birthDate" class="form-control" [(ngModel)]="addForm.birthDate" >
+      </div>
+  
+      
+      <div class="form-group">
+        <label class="form-label" >Contract Start Date</label>
+        <input  name="contractStartDate" class="form-control" [(ngModel)]="addForm.contractStartDate" >
+      </div>
+  
+      
+      <div class="form-group">
+        <label class="form-label" >Contract End Date</label>
+        <input  name="contractEndDate" class="form-control" [(ngModel)]="addForm.contractEndDate" >
+      </div>
+  
+   
+      
+  
+  
+      <label class="form-label" >Status</label>  
+      
+  
+      <div class="form-group form-check">
+        <input type="checkbox" name="active" class="form-check-input" [(ngModel)]="addForm.status">
+        <label class="form-check-label"  >Active</label>
+      </div>
+  
+       
+      <button type="submit" class="btn btn-primary">Save</button>
+
+    </form>
+  
+  
+  </div>

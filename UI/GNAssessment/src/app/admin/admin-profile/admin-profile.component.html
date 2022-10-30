@@ -1,1 +1,56 @@
-<p>admin-profile works!</p>
+<div class="container">
+    <br />
+    <br />
+    <h1>All Forms</h1>
+    <br />
+    <br />
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">User ID</th>
+            <th scope="col">User Name</th>
+            <th scope="col"></th>
+          
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let form of forms">
+                <th scope="row">{{form.id}}</th>
+                <td>{{form.name}}</td>
+                <td><a [routerLink]="['/admin/forms', form.id]">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+<!-- 
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">User ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Email</th>
+                <th scope="col">Coountry</th>
+                <th scope="col">City</th>
+                <th scope="col">birthDate</th>
+                <th scope="col">Contract Start Date</th>
+                <th scope="col">Contract End Date</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let form of forms">
+                <th scope="row">{{form.id}}</th>
+                <td>{{form.name}}</td>
+                <td>{{form.mobile}}</td>
+                <td>{{form.email}}</td>
+                <td>{{form.country}}</td>
+                <td>{{form.city}}</td>
+                <td>{{form.birthDate}}</td>
+                <td>{{form.contractStartDate}}</td>
+                <td>{{form.contractEndDate}}</td>
+                <td>{{form.status}}</td>
+            </tr>
+        </tbody>
+    </table> -->
+
+</div>

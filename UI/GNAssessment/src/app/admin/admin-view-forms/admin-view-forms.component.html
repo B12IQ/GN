@@ -1,0 +1,76 @@
+<div class="container"  *ngIf="formPost">
+  <br/>
+<h2>
+  Form Details
+</h2>
+<br/>
+
+  <form #post="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label  class="form-label">ID</label>
+      <input type="text" class="form-control" name="id" [(ngModel)]="formPost.id" readonly>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" >User Name</label>
+      <input type="text" name="name" class="form-control" [(ngModel)]="formPost.name" >
+    </div>
+    
+ 
+    <div class="form-group">
+      <label class="form-label" >Phone Number</label>
+      <input type="tel" name="mobile" class="form-control" [(ngModel)]="formPost.mobile" >
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" >Email</label>
+      <input type="email" name="email" class="form-control" [(ngModel)]="formPost.email" >
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" >Country</label>
+      <input type="text" name="country" class="form-control" [(ngModel)]="formPost.country" >
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" >City</label>
+      <input type="text" name="city" class="form-control" [(ngModel)]="formPost.city" >
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" >Date of Birth</label>
+      <input  name="birthDate" class="form-control" [(ngModel)]="formPost.birthDate" >
+    </div>
+
+    
+    <div class="form-group">
+      <label class="form-label" >Contract Start Date</label>
+      <input  name="contractStartDate" class="form-control" [(ngModel)]="formPost.contractStartDate" >
+    </div>
+
+    
+    <div class="form-group">
+      <label class="form-label" >Contract End Date</label>
+      <input  name="contractEndDate" class="form-control" [(ngModel)]="formPost.contractEndDate" >
+    </div>
+
+ 
+    
+
+
+    <label class="form-label" >Status</label>  
+    
+
+    <div class="form-group form-check">
+      <input type="checkbox" name="active" class="form-check-input" [(ngModel)]="formPost.status">
+      <label class="form-check-label"  >Active</label>
+    </div>
+
+     
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a type="submit" class="btn btn-danger" style="margin-left:20;" (click)="deleteUserForm()">Delet</a>
+
+  </form>
+
+
+</div>
